@@ -1,0 +1,123 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.navbar {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.nav-link.active {
+  background-color: #555;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Solid background color */
+}
+
+.content {
+  text-align: center;
+}
+.table-container {
+  display: table;
+  width: calc(100% - 100px); /* Subtracting padding from total width */
+  padding: 50px;
+  border-collapse: separate;
+  border-spacing: 50px;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  width: 33.33%; /* Three equal sized columns */
+  height: 100px; /* Setting cell height */
+  border: 1px solid black; /* 1px border for cells */
+  position: relative; /* For positioning tooltip */
+}
+
+.table-cell:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -25px; /* Adjust as needed */
+  right: -25px; /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Tooltip background color */
+  color: #fff; /* Tooltip text color */
+  padding: 5px 10px; /* Padding for tooltip */
+  border-radius: 5px; /* Rounded corners for tooltip */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.table-cell:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.table-container {
+  padding: 50px;
+  width: calc(100% - 100px); /* Subtracting padding from total width */
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+.data-table td {
+  text-align: left;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+  background-color: #f2f2f2;
+}
